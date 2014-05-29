@@ -51,10 +51,10 @@ $(function() {
         var bf = box.find(".box-body, .box-footer");
         if (!box.hasClass("collapsed-box")) {
             box.addClass("collapsed-box");
-            bf.slideUp();
+            bf.slideUp(150);
         } else {
             box.removeClass("collapsed-box");
-            bf.slideDown();
+            bf.slideDown(150);
         }
     });
 
@@ -598,13 +598,13 @@ $(window).load(function() {
                 e.preventDefault();
                 if (isActive) {
                     //Slide up to close menu
-                    menu.slideUp();
+                    menu.slideUp(150);
                     isActive = false;
                     btn.children(".fa-angle-down").first().removeClass("fa-angle-down").addClass("fa-angle-left");
                     btn.parent("li").removeClass("active");
                 } else {
                     //Slide down to open menu
-                    menu.slideDown();
+                    menu.slideDown(150);
                     isActive = true;
                     btn.children(".fa-angle-left").first().removeClass("fa-angle-left").addClass("fa-angle-down");
                     btn.parent("li").addClass("active");
