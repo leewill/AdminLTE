@@ -18,6 +18,9 @@
         <link href="../../css/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet"/>
         <!-- Bootstrap time Picker -->
         <link href="../../css/timepicker/bootstrap-timepicker.min.css" rel="stylesheet"/>
+        <!-- Bootstrap file -->
+        <link href="../../css/bootstrap-fileinput/fileinput.min.css" rel="stylesheet"/>
+        
         <!-- Theme style -->
         <link href="../../css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
@@ -655,6 +658,20 @@
                                     Many more skins available.
                                 </div>
                             </div><!-- /.box -->
+
+                            <!-- Bootstrap File -->
+                            <div class="box box-defalut">
+                                <div class="box-header">
+                                    <h3 class="box-title">Bootstrap File</h3>
+                                </div>
+                                <div class="box-body">
+                                    <form enctype="multipart/form-data" method="post">
+                                        <div class="form-group">
+                                            <input name="file" id="file-1" type="file" multiple>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div><!-- /.col (right) -->
                     </div><!-- /.row -->                    
 
@@ -677,10 +694,12 @@
         <script src="../../js/plugins/colorpicker/bootstrap-colorpicker.min.js" type="text/javascript"></script>
         <!-- bootstrap time picker -->
         <script src="../../js/plugins/timepicker/bootstrap-timepicker.min.js" type="text/javascript"></script>
+        <!-- bootstrap file -->
+        <script src="../../js/plugins/bootstrap-fileinput/fileinput.js" type="text/javascript"></script>
         <!-- AdminLTE App -->
         <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="js/AdminLTE/demo.js" type="text/javascript"></script>
+        <script src="../../js/AdminLTE/demo.js" type="text/javascript"></script>
         <!-- Page script -->
         <script type="text/javascript">
             $(function() {
@@ -738,6 +757,29 @@
                 //Timepicker
                 $(".timepicker").timepicker({
                     showInputs: false
+                });
+
+
+                $("#file-1").fileinput({
+                    showCaption: false,
+                    browseLabel: '选择文件',
+                    browseClass: "btn btn-default btn-flat",
+                    browseIcon: '<i class="fa fa-folder-open fa-lg"></i>&nbsp;',
+
+                    uploadLabel: '上传文件',
+                    uploadClass: "btn btn-primary btn-flat",
+                    uploadIcon: '<i class="fa fa-upload fa-lg"></i>&nbsp;',
+
+                    removeLabel:'删除文件',
+                    removeClass: "btn btn-danger btn-flat",
+                    removeIcon: '<i class="fa fa-trash-o fa-lg"></i>&nbsp;',
+                    msgLoading: '加载中 &hellip;',
+                    msgProgress: 'Loaded {percent}% of {file}',
+                    msgSelected: '已选择 {n} 个文件',
+
+                    fileType: "any",
+
+                    initialPreview: ["<img src='../../img/blur-background04.jpg' class='file-preview-image'>", "<img src='../../img/blur-background08.jpg' class='file-preview-image'>"]
                 });
             });
         </script>
