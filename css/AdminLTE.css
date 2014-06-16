@@ -2576,9 +2576,8 @@ Component: timeline
 .skin-black .navbar .nav > li > a:active,
 .skin-black .navbar .nav > li > a:focus,
 .skin-black .navbar .nav .open > a,
-.skin-black .navbar .nav .open > a:hover,
-.skin-black .navbar .nav .open > a:focus {
-  background: #ffffff;
+.skin-black .navbar .nav .open > a:hover{
+  background: #eee;
   color: #999999;
 }
 .skin-black .navbar .navbar-right > .nav {
